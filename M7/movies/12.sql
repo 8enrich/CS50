@@ -1,0 +1,1 @@
+SELECT title from movies WHERE movies.id IN(SELECT movie_id from stars JOIN people ON stars.person_id = people.id WHERE people.name = "Johnny Depp" INTERSECT SELECT movie_id from stars JOIN people ON stars.person_id = people.id WHERE people.name = "Helena Bonham Carter");
